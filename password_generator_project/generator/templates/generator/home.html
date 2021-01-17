@@ -1,0 +1,28 @@
+{% include "generator/base.html" %}
+<h1 style="text-align: center;">Password Generator</h1>
+
+<form action="{% url 'password_generator' %}" class="form-control" style="text-align: center;">
+    <select name="length" class="form-select" aria-label=".form-select-sm example" style="text-align: center; width:50%; margin:auto;">
+        <option value="6">6 char long</option>
+        <option value="7">7 char long</option>
+        <option value="8">8 char long</option>
+        <option value="9">9 char long</option>
+        <option value="10">10 char long</option>
+        <option value="11">11 char long</option>
+        <option value="12" selected="selected">12 char long</option>
+        <option value="13">13 char long</option>
+        <option value="14">14 char long</option>
+    </select>
+    <br>
+    <input type="checkbox" name="uppercase"> UpperCase
+    <br>
+    <input type="checkbox" name="numbers"> Numbers
+    <br>
+    <input type="checkbox" name="special_char"> Special Characters
+    <br>
+
+
+    <input type="submit" value="GeneratePassword" class="btn btn-success" style="margin: 1rem;">
+    <br>
+    <a href="{% url 'about' %}" class="btn btn-primary">About</a>
+</form>
